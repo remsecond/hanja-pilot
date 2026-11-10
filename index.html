@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1e1b4b">
+  <title>Hanja Impact — 40-Character Korean Root Pilot</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter + Noto Sans KR + Noto Serif KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Noto+Serif+KR:wght@600;700;900&amp;display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hanja-serif {
+      font-family: 'Noto Serif KR', Georgia, serif;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .safe-bottom {
+      padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.inset-x-0{left:0px;right:0px}.bottom-0{bottom:0px}.left-1\/2{left:50%}.top-0{top:0px}.top-16{top:4rem}.-right-3\.5{right:-0.875rem}.-top-1\.5{top:-0.375rem}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-3{margin-bottom:0.75rem}.mt-1\.5{margin-top:0.375rem}.mt-5{margin-top:1.25rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-2{height:0.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-2\.5{height:0.625rem}.h-\[18px\]{height:18px}.h-full{height:100%}.min-h-\[42px\]{min-height:42px}.min-h-\[44px\]{min-height:44px}.min-h-\[46px\]{min-height:46px}.min-h-\[48px\]{min-height:48px}.min-h-\[50px\]{min-height:50px}.min-h-screen{min-height:100vh}.min-h-\[36px\]{min-height:36px}.min-h-\[52px\]{min-height:52px}.min-h-\[56px\]{min-height:56px}.min-h-\[68px\]{min-height:68px}.min-h-\[84px\]{min-height:84px}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.min-w-\[42px\]{min-width:42px}.min-w-\[18px\]{min-width:18px}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-0\.5{gap:0.125rem}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-0\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.125rem * var(--tw-space-y-reverse))}.space-y-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.875rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-amber-300\/30{border-color:rgb(252 211 77 / 0.3)}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-300{--tw-bg-opacity:1;background-color:rgb(252 211 77 / var(--tw-bg-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-indigo-950{--tw-bg-opacity:1;background-color:rgb(30 27 75 / var(--tw-bg-opacity, 1))}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200\/70{background-color:rgb(226 232 240 / 0.7)}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-amber-400\/20{background-color:rgb(251 191 36 / 0.2)}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-indigo-950{--tw-gradient-from:#1e1b4b var(--tw-gradient-from-position);--tw-gradient-to:rgb(30 27 75 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-indigo-900{--tw-gradient-to:rgb(49 46 129 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #312e81 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-3\.5{padding:0.875rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.pb-28{padding-bottom:7rem}.pb-6{padding-bottom:1.5rem}.pt-1{padding-top:0.25rem}.pt-1\.5{padding-top:0.375rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-normal{font-weight:400}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.leading-none{line-height:1}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-950{--tw-text-opacity:1;color:rgb(69 26 3 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-emerald-950{--tw-text-opacity:1;color:rgb(2 44 34 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900\/80{color:rgb(49 46 129 / 0.8)}.text-indigo-950{--tw-text-opacity:1;color:rgb(30 27 75 / var(--tw-text-opacity, 1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.selection\:bg-indigo-100 *::selection{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.selection\:text-indigo-900 *::selection{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.selection\:bg-indigo-100::selection{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.selection\:text-indigo-900::selection{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.hover\:border-amber-400:hover{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.hover\:border-emerald-400:hover{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-amber-300:hover{--tw-bg-opacity:1;background-color:rgb(252 211 77 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-900:hover{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-700:hover{--tw-bg-opacity:1;background-color:rgb(190 18 60 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-800:hover{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-\[0\.99\]:active{--tw-scale-x:0.99;--tw-scale-y:0.99;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-col{flex-direction:column}.sm\:items-start{align-items:flex-start}.sm\:gap-2{gap:0.5rem}.sm\:p-6{padding:1.5rem}.sm\:p-5{padding:1.25rem}.sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xs{font-size:0.75rem;line-height:1rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}}</style></head>
+<body class="min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between pb-28 selection:bg-indigo-100 selection:text-indigo-900">
+
+  <!-- TOP HEADER BAR -->
+  <header class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-200 px-3 sm:px-4 py-2.5">
+    <div class="max-w-xl mx-auto flex items-center justify-between gap-2">
+      <button id="headerHomeBtn" class="flex items-center gap-2.5 text-left min-h-[44px] focus:outline-none cursor-pointer">
+        <div class="w-10 h-10 rounded-xl bg-indigo-950 text-amber-300 flex items-center justify-center text-xl font-bold shadow-sm shrink-0 hanja-serif">
+          韓
+        </div>
+        <div>
+          <h1 class="text-sm sm:text-base font-bold tracking-tight text-slate-900 leading-tight">Hanja Impact</h1>
+          <p class="text-[11px] sm:text-xs text-slate-500 leading-tight">40-Character Korean Root Pilot</p>
+        </div>
+      </button>
+
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <!-- Prominent Mobile Share / Get Link Button -->
+        <button id="openShareModalBtn" class="hidden px-3 min-h-[42px] rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-bold flex items-center gap-1.5 shadow-sm transition cursor-pointer">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+          <span>Mobile Link</span>
+        </button>
+
+        <!-- Contextual Passages Button -->
+        <button id="headerTextsBtn" class="px-2.5 sm:px-3 min-h-[42px] rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 transition cursor-pointer" title="Explained Korean Passages">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <span class="hidden sm:inline">Texts</span>
+        </button>
+
+        <!-- Reset Progress Button -->
+        <button id="openResetModalBtn" class="p-2.5 min-h-[42px] min-w-[42px] rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition cursor-pointer" title="Reset Demo Progress" aria-label="Reset Demo Progress">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- GRACEFUL SPEECH TOAST -->
+  <div id="speechToast" class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-40 bg-indigo-950 text-white text-xs font-medium px-4 py-2 rounded-full shadow-lg items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
+    <span id="speechToastText">Speaking...</span>
+  </div>
+
+  <!-- SHARE / MOBILE LINK MODAL -->
+  <div id="shareModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-slate-200 space-y-4">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold uppercase">No Login · Works on iPhone &amp; Android</span>
+          <h3 class="font-bold text-slate-900 text-lg mt-1">Get Your Public Mobile Link</h3>
+        </div>
+        <button id="closeShareModalBtn" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 cursor-pointer" aria-label="Close">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        Gemini chat cannot publish to an external server automatically—and Gemini's internal links often ask mobile users to sign in. Because this app is now a <strong>single standalone HTML file</strong>, you can create a real public mobile URL in 15 seconds:
+      </p>
+
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-4 space-y-3 text-xs sm:text-sm">
+        <div class="flex items-start gap-2.5">
+          <span class="w-6 h-6 rounded-full bg-indigo-950 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+          <div>
+            <p class="font-bold text-slate-900">Download the standalone app file</p>
+            <p class="text-xs text-slate-500">Tap the button below to save <code class="font-mono bg-slate-200/70 px-1 rounded">index.html</code> to your device.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="w-6 h-6 rounded-full bg-indigo-950 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+          <div>
+            <p class="font-bold text-slate-900">Drop it onto a free instant host</p>
+            <p class="text-xs text-slate-500">Upload <code class="font-mono bg-slate-200/70 px-1 rounded">index.html</code> to <strong>tiiny.host</strong> or <strong>app.netlify.com/drop</strong>. You will immediately get a permanent <code class="font-mono">https://</code> link anyone can open on mobile!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-2.5 pt-1">
+        <button id="downloadHtmlBtn" class="w-full min-h-[50px] rounded-2xl bg-indigo-950 hover:bg-indigo-900 text-amber-300 font-bold text-sm flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Download Standalone index.html</span>
+        </button>
+
+        <button id="copyHtmlBtn" class="w-full min-h-[46px] rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs flex items-center justify-center gap-2 cursor-pointer transition">
+          <span id="copyHtmlBtnLabel">Or Copy Full HTML Code to Clipboard</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INLINE RESET MODAL -->
+  <div id="resetModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-5 shadow-xl border border-slate-200 space-y-4">
+      <div class="flex items-start gap-3">
+        <div class="p-2.5 rounded-xl bg-amber-100 text-amber-700 shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 text-base">Reset Pilot Progress?</h3>
+          <p class="text-sm text-slate-600 mt-1">
+            This clears your Characters Introduced, Readings Remembered, Compounds Understood, and My Review queue back to zero.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3 pt-1">
+        <button id="cancelResetBtn" class="min-h-[48px] rounded-xl border border-slate-300 font-semibold text-sm text-slate-700 hover:bg-slate-50 cursor-pointer">
+          Cancel
+        </button>
+        <button id="confirmResetBtn" class="min-h-[48px] rounded-xl bg-rose-600 hover:bg-rose-700 font-semibold text-sm text-white shadow-sm cursor-pointer">
+          Reset All
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APP WORKSPACE -->
+  <main id="appRoot" class="flex-1 w-full max-w-xl mx-auto px-4 pt-4 pb-6">
+        <div class="space-y-6">
+          <!-- HERO CONTINUE CTA -->
+          <section class="rounded-3xl bg-gradient-to-br from-indigo-950 via-indigo-900 to-slate-900 text-white p-5 sm:p-6 shadow-lg">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400/20 text-amber-200 border border-amber-300/30">
+                ✦ Priority Recall
+              </span>
+              <span class="text-xs text-indigo-200">Mobile-Ready · Untimed</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold tracking-tight leading-snug">
+              Unlock Korean Vocabulary Through Hanja Roots
+            </h2>
+            <p class="text-sm text-indigo-200 mt-1.5 leading-relaxed">Up next in My Review: 金 (금 / 김 · gold)</p>
+            <button data-action="smart-continue" class="mt-5 w-full min-h-[56px] rounded-2xl bg-amber-400 hover:bg-amber-300 active:scale-[0.99] text-slate-950 font-bold text-base px-5 py-3.5 shadow-md flex items-center justify-between transition cursor-pointer">
+              <span>▶ Review 2 Due Characters</span>
+              <span>→</span>
+            </button>
+          </section>
+
+          <!-- TRUE MASTERY METRICS -->
+          <section class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <div>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-800">True Mastery Metrics</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Tracked across 3 knowledge dimensions</p>
+              </div>
+              
+                <button data-action="nav" data-tab="review" class="px-3 py-1.5 min-h-[36px] rounded-xl bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold cursor-pointer">
+                  ↻ 2 Due
+                </button>
+              
+            </div>
+            <div class="space-y-3.5">
+              
+        <div>
+          <div class="flex items-center justify-between text-xs mb-1.5">
+            <span class="font-semibold text-slate-700">Characters Introduced</span>
+            <span class="font-bold text-slate-900">5 <span class="text-slate-400 font-normal">/ 40</span> (13%)</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full overflow-hidden bg-indigo-100">
+            <div class="h-full rounded-full transition-all duration-500 bg-indigo-600" style="width: 13%"></div>
+          </div>
+        </div>
+      
+              
+        <div>
+          <div class="flex items-center justify-between text-xs mb-1.5">
+            <span class="font-semibold text-slate-700">Korean Readings Remembered</span>
+            <span class="font-bold text-slate-900">3 <span class="text-slate-400 font-normal">/ 40</span> (8%)</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full overflow-hidden bg-emerald-100">
+            <div class="h-full rounded-full transition-all duration-500 bg-emerald-600" style="width: 8%"></div>
+          </div>
+        </div>
+      
+              
+        <div>
+          <div class="flex items-center justify-between text-xs mb-1.5">
+            <span class="font-semibold text-slate-700">Compounds Understood</span>
+            <span class="font-bold text-slate-900">2 <span class="text-slate-400 font-normal">/ 40</span> (5%)</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full overflow-hidden bg-amber-100">
+            <div class="h-full rounded-full transition-all duration-500 bg-amber-500" style="width: 5%"></div>
+          </div>
+        </div>
+      
+            </div>
+          </section>
+
+          <!-- 3 PRACTICE GAMES -->
+          <section class="space-y-2.5">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-slate-700">3 Core Practice Games</h3>
+              <span class="text-xs text-slate-500">Auto-saves misses to Review</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <button data-action="open-game" data-mode="meaning" class="min-h-[84px] p-4 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 shadow-sm text-left flex sm:flex-col justify-between items-center sm:items-start gap-3 transition cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-indigo-600 uppercase">Game 1</span>
+                  <h4 class="font-bold text-slate-900 text-sm mt-0.5">Find the Meaning</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Match glyph to English sense</p>
+                </div>
+                <span class="text-2xl font-bold text-indigo-950 bg-indigo-50 px-3 py-1.5 rounded-xl hanja-serif">水</span>
+              </button>
+
+              <button data-action="open-game" data-mode="build" class="min-h-[84px] p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-400 shadow-sm text-left flex sm:flex-col justify-between items-center sm:items-start gap-3 transition cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-emerald-600 uppercase">Game 2</span>
+                  <h4 class="font-bold text-slate-900 text-sm mt-0.5">Build the Word</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Combine 2 roots into Korean</p>
+                </div>
+                <span class="text-lg font-bold text-emerald-950 bg-emerald-50 px-2.5 py-1.5 rounded-xl hanja-serif">讀+書</span>
+              </button>
+
+              <button data-action="open-game" data-mode="family" class="min-h-[84px] p-4 rounded-2xl bg-white border border-slate-200 hover:border-amber-400 shadow-sm text-left flex sm:flex-col justify-between items-center sm:items-start gap-3 transition cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-amber-600 uppercase">Game 3 · Signature</span>
+                  <h4 class="font-bold text-slate-900 text-sm mt-0.5">Find the Family</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Spot shared root across 3 words</p>
+                </div>
+                <span class="text-2xl font-bold text-amber-950 bg-amber-50 px-3 py-1.5 rounded-xl hanja-serif">學</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- EXPLAINED TEXTS BANNER -->
+          <section class="rounded-2xl bg-indigo-50 border border-indigo-200 p-4 flex items-center justify-between gap-3">
+            <div class="space-y-0.5">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 text-[10px] font-bold uppercase bg-indigo-700 text-white rounded-md">Phase 2 Preview</span>
+                <h4 class="font-bold text-sm text-indigo-950">Explained Korean Passages</h4>
+              </div>
+              <p class="text-xs text-indigo-900/80">Tap Sino-Korean words like 은행, 대화, and 식사 inside real sentences.</p>
+            </div>
+            <button data-action="nav" data-tab="texts" class="min-h-[46px] px-4 rounded-xl bg-indigo-700 hover:bg-indigo-800 text-white text-xs font-bold shrink-0 cursor-pointer">
+              Read Now
+            </button>
+          </section>
+
+          <!-- 8 PILOT UNITS -->
+          <section class="space-y-2.5">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-slate-700">8 Pilot Units (1–40)</h3>
+              <button data-action="nav" data-tab="explorer" class="text-xs font-semibold text-indigo-700 hover:underline cursor-pointer">
+                Phonetic Table →
+              </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              
+          <button data-action="open-unit" data-unit="1" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 1</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Elements &amp; Time</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                日 月 火 水 木
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">
+              5/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="2" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 2</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Metals &amp; Landscape</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                金 土 山 川 田
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="3" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 3</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Cosmos &amp; Humanity</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                天 地 人 子 女
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="4" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 4</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Family Bonds</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                男 父 母 兄 姉
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="5" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 5</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Mind &amp; Senses</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                心 手 足 目 耳
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="6" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 6</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Nourishment &amp; Speech</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                口 食 飮 見 言
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="7" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 7</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Literacy &amp; Commerce</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                話 書 讀 買 賣
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+          <button data-action="open-unit" data-unit="8" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit 8</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">Transit &amp; Finance</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                車 驛 道 旅 銀
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+              0/5
+            </span>
+          </button>
+        
+            </div>
+          </section>
+        </div>
+      </main>
+
+  <!-- BOTTOM THUMB NAVIGATION BAR -->
+  <nav class="fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-slate-200 px-2 pt-1.5 safe-bottom">
+    <div id="bottomNav" class="max-w-xl mx-auto grid grid-cols-5 gap-1">
+        <button data-action="nav" data-tab="home" class="relative min-h-[52px] rounded-xl flex flex-col items-center justify-center gap-0.5 transition cursor-pointer bg-indigo-50 text-indigo-800 font-bold">
+          <div class="relative text-base leading-none">
+            <span>✦</span>
+            
+          </div>
+          <span class="text-[11px] leading-tight mt-0.5">Home</span>
+        </button>
+      
+        <button data-action="nav" data-tab="cards" class="relative min-h-[52px] rounded-xl flex flex-col items-center justify-center gap-0.5 transition cursor-pointer text-slate-500 hover:text-slate-800 font-medium">
+          <div class="relative text-base leading-none">
+            <span>📖</span>
+            
+          </div>
+          <span class="text-[11px] leading-tight mt-0.5">Cards</span>
+        </button>
+      
+        <button data-action="nav" data-tab="games" class="relative min-h-[52px] rounded-xl flex flex-col items-center justify-center gap-0.5 transition cursor-pointer text-slate-500 hover:text-slate-800 font-medium">
+          <div class="relative text-base leading-none">
+            <span>🎯</span>
+            
+          </div>
+          <span class="text-[11px] leading-tight mt-0.5">Games</span>
+        </button>
+      
+        <button data-action="nav" data-tab="review" class="relative min-h-[52px] rounded-xl flex flex-col items-center justify-center gap-0.5 transition cursor-pointer text-slate-500 hover:text-slate-800 font-medium">
+          <div class="relative text-base leading-none">
+            <span>↻</span>
+            <span class="absolute -top-1.5 -right-3.5 min-w-[18px] h-[18px] px-1 rounded-full bg-rose-600 text-white text-[10px] font-bold flex items-center justify-center">2</span>
+          </div>
+          <span class="text-[11px] leading-tight mt-0.5">My Review</span>
+        </button>
+      
+        <button data-action="nav" data-tab="explorer" class="relative min-h-[52px] rounded-xl flex flex-col items-center justify-center gap-0.5 transition cursor-pointer text-slate-500 hover:text-slate-800 font-medium">
+          <div class="relative text-base leading-none">
+            <span>🗂</span>
+            
+          </div>
+          <span class="text-[11px] leading-tight mt-0.5">Dataset</span>
+        </button>
+      </div>
+  </nav>
+
+  <!-- COMPLETE APPLICATION LOGIC & QA-CLEANED 40-CHARACTER DATASET -->
+  <script>
+    // =========================================================================
+    // 1. COMPLETE QA-CLEANED 40-CHARACTER PILOT DATASET (DAVIS BLAIR CORPUS)
+    // =========================================================================
+    const PILOT_DATASET = [
+      {
+        seq: 1, unit: 1, glyph: '日', hangul: '일', roman: 'il',
+        meanings: 'sun · day', sortKey: 112008,
+        compoundHangul: '일기', compoundHanja: '日記',
+        displayCompoundHangul: '오늘 (일기)', displayCompoundHanja: '今日 (日記)',
+        speechCompound: '오늘',
+        naturalMeaning: 'Today (Diary)', literalGloss: 'Now + day (Day + record)'
+      },
+      {
+        seq: 2, unit: 1, glyph: '月', hangul: '월', roman: 'wol',
+        meanings: 'moon · month', sortKey: 111408,
+        compoundHangul: '월급', compoundHanja: '月給',
+        naturalMeaning: 'Salary', literalGloss: 'Month + supply'
+      },
+      {
+        seq: 3, unit: 1, glyph: '火', hangul: '화', roman: 'hwa',
+        meanings: 'fire', sortKey: 180900,
+        compoundHangul: '화재', compoundHanja: '火災',
+        naturalMeaning: 'Fire disaster', literalGloss: 'Fire + calamity'
+      },
+      {
+        seq: 4, unit: 1, glyph: '水', hangul: '수', roman: 'su',
+        meanings: 'water', sortKey: 91300,
+        compoundHangul: '수도', compoundHanja: '水道',
+        naturalMeaning: 'Waterworks', literalGloss: 'Water + way'
+      },
+      {
+        seq: 5, unit: 1, glyph: '木', hangul: '목', roman: 'mok',
+        meanings: 'tree · wood', sortKey: 60801,
+        compoundHangul: '목재', compoundHanja: '木材',
+        naturalMeaning: 'Lumber', literalGloss: 'Wood + material'
+      },
+      {
+        seq: 6, unit: 2, glyph: '金', hangul: '금 / 김', roman: 'geum / gim',
+        primaryHangul: '금',
+        meanings: 'gold · metal · money', sortKey: 1816,
+        compoundHangul: '금속', compoundHanja: '金屬',
+        naturalMeaning: 'Metal', literalGloss: 'Metal + category',
+        soundLawNote: 'Read "금" (geum) for metal/money; "김" (gim) in surnames & place names like 김포.'
+      },
+      {
+        seq: 7, unit: 2, glyph: '土', hangul: '토', roman: 'to',
+        meanings: 'earth · soil', sortKey: 160800,
+        compoundHangul: '토양', compoundHanja: '土壤',
+        naturalMeaning: 'Soil', literalGloss: 'Earth + fertile soil'
+      },
+      {
+        seq: 8, unit: 2, glyph: '山', hangul: '산', roman: 'san',
+        meanings: 'mountain', sortKey: 90004,
+        compoundHangul: '산악', compoundHanja: '山岳',
+        naturalMeaning: 'Mountains', literalGloss: 'Mountain + peak'
+      },
+      {
+        seq: 9, unit: 2, glyph: '川', hangul: '천', roman: 'cheon',
+        meanings: 'river', sortKey: 140404,
+        compoundHangul: '하천', compoundHanja: '河川',
+        naturalMeaning: 'River / Stream', literalGloss: 'River + stream'
+      },
+      {
+        seq: 10, unit: 2, glyph: '田', hangul: '전', roman: 'jeon',
+        meanings: 'field · rice paddy', sortKey: 120404,
+        compoundHangul: '전원', compoundHanja: '田園',
+        naturalMeaning: 'Countryside', literalGloss: 'Field + garden',
+        qaFixed: true
+      },
+      {
+        seq: 11, unit: 3, glyph: '天', hangul: '천', roman: 'cheon',
+        meanings: 'heaven · sky', sortKey: 140404,
+        compoundHangul: '천국', compoundHanja: '天國',
+        naturalMeaning: 'Heaven / Paradise', literalGloss: 'Sky + country'
+      },
+      {
+        seq: 12, unit: 3, glyph: '地', hangul: '지', roman: 'ji',
+        meanings: 'earth · ground', sortKey: 122000,
+        compoundHangul: '지구', compoundHanja: '地球',
+        naturalMeaning: 'Earth / Globe', literalGloss: 'Ground + sphere'
+      },
+      {
+        seq: 13, unit: 3, glyph: '人', hangul: '인', roman: 'in',
+        meanings: 'person', sortKey: 112004,
+        compoundHangul: '인간', compoundHanja: '人間',
+        naturalMeaning: 'Human being', literalGloss: 'Person + among'
+      },
+      {
+        seq: 14, unit: 3, glyph: '子', hangul: '자', roman: 'ja',
+        meanings: 'child · son', sortKey: 120000,
+        compoundHangul: '자녀', compoundHanja: '子女',
+        naturalMeaning: 'Children', literalGloss: 'Son + daughter'
+      },
+      {
+        seq: 15, unit: 3, glyph: '女', hangul: '녀 / 여', roman: 'nyeo / yeo',
+        primaryHangul: '여',
+        meanings: 'woman · female', sortKey: 20600,
+        compoundHangul: '여자', compoundHanja: '女子',
+        naturalMeaning: 'Woman', literalGloss: 'Woman + person',
+        soundLawNote: 'Initial Sound Law (두음법칙): "녀" drops initial n to become "여" at the start of a word (여자), staying "녀" inside compounds (자녀).'
+      },
+      {
+        seq: 16, unit: 4, glyph: '男', hangul: '남', roman: 'nam',
+        meanings: 'man · male', sortKey: 20016,
+        compoundHangul: '남녀', compoundHanja: '男女',
+        naturalMeaning: 'Men and women', literalGloss: 'Man + woman'
+      },
+      {
+        seq: 17, unit: 4, glyph: '父', hangul: '부', roman: 'bu',
+        meanings: 'father', sortKey: 71300,
+        compoundHangul: '부친', compoundHanja: '父親',
+        naturalMeaning: 'Father', literalGloss: 'Father + parent'
+      },
+      {
+        seq: 18, unit: 4, glyph: '母', hangul: '모', roman: 'mo',
+        meanings: 'mother', sortKey: 60800,
+        compoundHangul: '모친', compoundHanja: '母親',
+        naturalMeaning: 'Mother', literalGloss: 'Mother + parent'
+      },
+      {
+        seq: 19, unit: 4, glyph: '兄', hangul: '형', roman: 'hyeong',
+        meanings: 'older brother', sortKey: 180621,
+        compoundHangul: '형제', compoundHanja: '兄弟',
+        naturalMeaning: 'Siblings / Brothers', literalGloss: 'Older brother + younger brother'
+      },
+      {
+        seq: 20, unit: 4, glyph: '姉', hangul: '자', roman: 'ja',
+        meanings: 'older sister', sortKey: 120000,
+        compoundHangul: '자매', compoundHanja: '姉妹',
+        naturalMeaning: 'Sisters', literalGloss: 'Older sister + younger sister'
+      },
+      {
+        seq: 21, unit: 5, glyph: '心', hangul: '심', roman: 'sim',
+        meanings: 'heart · mind', sortKey: 92016,
+        compoundHangul: '중심', compoundHanja: '中心',
+        naturalMeaning: 'Center / Core', literalGloss: 'Middle + heart'
+      },
+      {
+        seq: 22, unit: 5, glyph: '手', hangul: '수', roman: 'su',
+        meanings: 'hand', sortKey: 91300,
+        compoundHangul: '수단', compoundHanja: '手段',
+        naturalMeaning: 'Means / Method', literalGloss: 'Hand + step'
+      },
+      {
+        seq: 23, unit: 5, glyph: '足', hangul: '족', roman: 'jok',
+        meanings: 'foot · leg', sortKey: 120801,
+        compoundHangul: '만족', compoundHanja: '滿足',
+        naturalMeaning: 'Satisfaction', literalGloss: 'Full + foot/enough'
+      },
+      {
+        seq: 24, unit: 5, glyph: '目', hangul: '목', roman: 'mok',
+        meanings: 'eye', sortKey: 60801,
+        compoundHangul: '목표', compoundHanja: '目標',
+        naturalMeaning: 'Goal / Target', literalGloss: 'Eye + mark'
+      },
+      {
+        seq: 25, unit: 5, glyph: '耳', hangul: '이', roman: 'i',
+        meanings: 'ear', sortKey: 112000,
+        compoundHangul: '이목', compoundHanja: '耳目',
+        naturalMeaning: 'Public attention', literalGloss: 'Ear + eye'
+      },
+      {
+        seq: 26, unit: 6, glyph: '口', hangul: '구', roman: 'gu',
+        meanings: 'mouth · opening', sortKey: 1300,
+        compoundHangul: '인구', compoundHanja: '人口',
+        naturalMeaning: 'Population', literalGloss: 'Person + mouth'
+      },
+      {
+        seq: 27, unit: 6, glyph: '食', hangul: '식', roman: 'sik',
+        meanings: 'eat · food', sortKey: 92001,
+        compoundHangul: '식사', compoundHanja: '食事',
+        naturalMeaning: 'Meal', literalGloss: 'Eat + affair'
+      },
+      {
+        seq: 28, unit: 6, glyph: '飮', hangul: '음', roman: 'eum',
+        meanings: 'drink', sortKey: 111816,
+        compoundHangul: '음료', compoundHanja: '飮料',
+        naturalMeaning: 'Beverage', literalGloss: 'Drink + ingredient'
+      },
+      {
+        seq: 29, unit: 6, glyph: '見', hangul: '견 / 현', roman: 'gyeon / hyeon',
+        primaryHangul: '견',
+        meanings: 'see · look', sortKey: 604,
+        compoundHangul: '견해', compoundHanja: '見解',
+        naturalMeaning: 'Opinion / View', literalGloss: 'See + untie/understand',
+        soundLawNote: 'Read "견" for seeing/views; "현" when appearing formally before a superior (알현).'
+      },
+      {
+        seq: 30, unit: 6, glyph: '言', hangul: '언', roman: 'eon',
+        meanings: 'say · words', sortKey: 110404,
+        compoundHangul: '언어', compoundHanja: '言語',
+        naturalMeaning: 'Language', literalGloss: 'Words + speech'
+      },
+      {
+        seq: 31, unit: 7, glyph: '話', hangul: '화', roman: 'hwa',
+        meanings: 'talk · speech', sortKey: 180900,
+        compoundHangul: '대화', compoundHanja: '對話',
+        naturalMeaning: 'Conversation', literalGloss: 'Face-to-face + talk'
+      },
+      {
+        seq: 32, unit: 7, glyph: '書', hangul: '서', roman: 'seo',
+        meanings: 'write · book', sortKey: 90400,
+        compoundHangul: '독서', compoundHanja: '讀書',
+        naturalMeaning: 'Reading', literalGloss: 'Read + book'
+      },
+      {
+        seq: 33, unit: 7, glyph: '讀', hangul: '독 / 두', roman: 'dok / du',
+        primaryHangul: '독',
+        meanings: 'read', sortKey: 30801,
+        compoundHangul: '독서', compoundHanja: '讀書',
+        naturalMeaning: 'Reading', literalGloss: 'Read + book',
+        soundLawNote: 'Read "독" for reading; "두" when referring to punctuation/phrasing pauses (구두점).'
+      },
+      {
+        seq: 34, unit: 7, glyph: '買', hangul: '매', roman: 'mae',
+        meanings: 'buy', sortKey: 60100,
+        compoundHangul: '구매', compoundHanja: '購買',
+        naturalMeaning: 'Purchase', literalGloss: 'Buy + buy'
+      },
+      {
+        seq: 35, unit: 7, glyph: '賣', hangul: '매', roman: 'mae',
+        meanings: 'sell', sortKey: 60100,
+        compoundHangul: '매매', compoundHanja: '賣買',
+        naturalMeaning: 'Buying and selling / Trading', literalGloss: 'Sell + buy',
+        soundLawNote: 'Notice how 賣 (sell, topped with 士) and 買 (buy) share the Korean reading "매"!'
+      },
+      {
+        seq: 36, unit: 8, glyph: '車', hangul: '거 / 차', roman: 'geo / cha',
+        primaryHangul: '차',
+        meanings: 'car · vehicle · wheel', sortKey: 400,
+        compoundHangul: '자동차', compoundHanja: '自動車',
+        naturalMeaning: 'Automobile', literalGloss: 'Self + move + vehicle',
+        soundLawNote: 'Read "차" in motor/rail vehicles (자동차, 기차) and "거" in bicycles/rickshaws (자전거).'
+      },
+      {
+        seq: 37, unit: 8, glyph: '驛', hangul: '역', roman: 'yeok',
+        meanings: 'station', sortKey: 110601,
+        compoundHangul: '역전', compoundHanja: '驛前',
+        naturalMeaning: 'In front of the station', literalGloss: 'Station + front'
+      },
+      {
+        seq: 38, unit: 8, glyph: '道', hangul: '도', roman: 'do',
+        meanings: 'road · way · principle', sortKey: 30800,
+        compoundHangul: '도로', compoundHanja: '道路',
+        naturalMeaning: 'Roadway', literalGloss: 'Road + path'
+      },
+      {
+        seq: 39, unit: 8, glyph: '旅', hangul: '려 / 여', roman: 'ryeo / yeo',
+        primaryHangul: '여',
+        meanings: 'travel · journey', sortKey: 50600,
+        compoundHangul: '여행', compoundHanja: '旅行',
+        naturalMeaning: 'Travel / Trip', literalGloss: 'Travel + go',
+        soundLawNote: 'Initial Sound Law: "려" becomes "여" at the start of words (여행, 여권).'
+      },
+      {
+        seq: 40, unit: 8, glyph: '銀', hangul: '은', roman: 'eun',
+        meanings: 'silver · money', sortKey: 111804,
+        compoundHangul: '은행', compoundHanja: '銀行',
+        naturalMeaning: 'Bank', literalGloss: 'Silver + guild/go'
+      }
+    ];
+
+    const UNIT_TITLES = {
+      1: 'Elements & Time',
+      2: 'Metals & Landscape',
+      3: 'Cosmos & Humanity',
+      4: 'Family Bonds',
+      5: 'Mind & Senses',
+      6: 'Nourishment & Speech',
+      7: 'Literacy & Commerce',
+      8: 'Transit & Finance'
+    };
+
+    const BUILD_WORD_DECK = [
+      {
+        id: 'bw-1', leftGlyph: '水', leftHint: 'water (수)', rightGlyph: '道', rightHint: 'way / pipe (도)',
+        answerHangul: '수도', answerMeaning: 'Waterworks', hanjaPair: '水道',
+        literal: 'Water + way — channeled water supply system', relatedSeqs: [4, 38],
+        options: [
+          { hangul: '수도', meaning: 'Waterworks' },
+          { hangul: '도로', meaning: 'Roadway' },
+          { hangul: '하천', meaning: 'River / Stream' },
+          { hangul: '수단', meaning: 'Means / Method' }
+        ]
+      },
+      {
+        id: 'bw-2', leftGlyph: '讀', leftHint: 'read (독)', rightGlyph: '書', rightHint: 'book / write (서)',
+        answerHangul: '독서', answerMeaning: 'Reading', hanjaPair: '讀書',
+        literal: 'Read + book — the act of reading books', relatedSeqs: [33, 32],
+        options: [
+          { hangul: '독서', meaning: 'Reading' },
+          { hangul: '대화', meaning: 'Conversation' },
+          { hangul: '언어', meaning: 'Language' },
+          { hangul: '견해', meaning: 'Opinion / View' }
+        ]
+      },
+      {
+        id: 'bw-3', leftGlyph: '子', leftHint: 'son / child (자)', rightGlyph: '女', rightHint: 'daughter / woman (녀)',
+        answerHangul: '자녀', answerMeaning: 'Children', hanjaPair: '子女',
+        literal: 'Son + daughter — sons and daughters collectively', relatedSeqs: [14, 15],
+        options: [
+          { hangul: '자녀', meaning: 'Children' },
+          { hangul: '남녀', meaning: 'Men and women' },
+          { hangul: '여자', meaning: 'Woman' },
+          { hangul: '자매', meaning: 'Sisters' }
+        ]
+      },
+      {
+        id: 'bw-4', leftGlyph: '男', leftHint: 'man / male (남)', rightGlyph: '女', rightHint: 'woman / female (녀)',
+        answerHangul: '남녀', answerMeaning: 'Men and women', hanjaPair: '男女',
+        literal: 'Man + woman — notice 女 keeps "녀" inside a compound!', relatedSeqs: [16, 15],
+        options: [
+          { hangul: '남녀', meaning: 'Men and women' },
+          { hangul: '형제', meaning: 'Siblings / Brothers' },
+          { hangul: '자녀', meaning: 'Children' },
+          { hangul: '인간', meaning: 'Human being' }
+        ]
+      },
+      {
+        id: 'bw-5', leftGlyph: '耳', leftHint: 'ear (이)', rightGlyph: '目', rightHint: 'eye (목)',
+        answerHangul: '이목', answerMeaning: 'Public attention', hanjaPair: '耳目',
+        literal: 'Ear + eye — everyone’s ears and eyes turned toward something', relatedSeqs: [25, 24],
+        options: [
+          { hangul: '이목', meaning: 'Public attention' },
+          { hangul: '목표', meaning: 'Goal / Target' },
+          { hangul: '중심', meaning: 'Center / Core' },
+          { hangul: '인구', meaning: 'Population' }
+        ]
+      },
+      {
+        id: 'bw-6', leftGlyph: '賣', leftHint: 'sell (매)', rightGlyph: '買', rightHint: 'buy (매)',
+        answerHangul: '매매', answerMeaning: 'Buying & selling', hanjaPair: '賣買',
+        literal: 'Sell + buy — two distinct Hanja that both read "매" in Korean!', relatedSeqs: [35, 34],
+        options: [
+          { hangul: '매매', meaning: 'Buying & selling' },
+          { hangul: '구매', meaning: 'Purchase' },
+          { hangul: '월급', meaning: 'Salary' },
+          { hangul: '은행', meaning: 'Bank' }
+        ]
+      },
+      {
+        id: 'bw-7', leftGlyph: '人', leftHint: 'person (인)', rightGlyph: '口', rightHint: 'mouth (구)',
+        answerHangul: '인구', answerMeaning: 'Population', hanjaPair: '人口',
+        literal: 'Person + mouth — counting the mouths to feed in a territory', relatedSeqs: [13, 26],
+        options: [
+          { hangul: '인구', meaning: 'Population' },
+          { hangul: '인간', meaning: 'Human being' },
+          { hangul: '식사', meaning: 'Meal' },
+          { hangul: '천국', meaning: 'Heaven / Paradise' }
+        ]
+      },
+      {
+        id: 'bw-8', leftGlyph: '銀', leftHint: 'silver / money (은)', rightGlyph: '行', rightHint: 'guild / go (행)',
+        answerHangul: '은행', answerMeaning: 'Bank', hanjaPair: '銀行',
+        literal: 'Silver + merchant guild — historical silver house, modern bank', relatedSeqs: [40],
+        options: [
+          { hangul: '은행', meaning: 'Bank' },
+          { hangul: '금속', meaning: 'Metal' },
+          { hangul: '여행', meaning: 'Travel / Trip' },
+          { hangul: '역전', meaning: 'In front of the station' }
+        ]
+      }
+    ];
+
+    const FIND_FAMILY_DECK = [
+      {
+        id: 'ff-1',
+        words: [
+          { hangul: '학교', hanja: '學校', meaning: 'School' },
+          { hangul: '학생', hanja: '學生', meaning: 'Student' },
+          { hangul: '학습', hanja: '學習', meaning: 'Learning / Study' }
+        ],
+        answerGlyph: '學', relatedSeqs: [32, 33],
+        explanation: 'Every word with 학 (學) here connects to formal learning: building (校), person (生), and practice (習).',
+        options: [
+          { glyph: '學', label: '학 · study / learning' },
+          { glyph: '書', label: '서 · write / book' },
+          { glyph: '讀', label: '독 · read' },
+          { glyph: '言', label: '언 · say / words' }
+        ]
+      },
+      {
+        id: 'ff-2',
+        words: [
+          { hangul: '수도', hanja: '水道', meaning: 'Waterworks' },
+          { hangul: '수영', hanja: '水泳', meaning: 'Swimming' },
+          { hangul: '홍수', hanja: '洪水', meaning: 'Flood' }
+        ],
+        answerGlyph: '水', relatedSeqs: [4],
+        explanation: 'Watch out for homophones! Both 水 (water) and 手 (hand) read "수" in Korean, so knowing 水 distinguishes waterworks (水道) from hand-method (手段).',
+        options: [
+          { glyph: '水', label: '수 · water' },
+          { glyph: '手', label: '수 · hand' },
+          { glyph: '川', label: '천 · river' },
+          { glyph: '飮', label: '음 · drink' }
+        ]
+      },
+      {
+        id: 'ff-3',
+        words: [
+          { hangul: '독서', hanja: '讀書', meaning: 'Reading' },
+          { hangul: '서점', hanja: '書店', meaning: 'Bookstore' },
+          { hangul: '문서', hanja: '文書', meaning: 'Document' }
+        ],
+        answerGlyph: '書', relatedSeqs: [32],
+        explanation: '書 (서) anchors written texts whether at the end (독서, 문서) or start (서점, 도서관) of a Korean compound.',
+        options: [
+          { glyph: '書', label: '서 · write / book' },
+          { glyph: '讀', label: '독 · read' },
+          { glyph: '話', label: '화 · talk / speech' },
+          { glyph: '見', label: '견 · see / look' }
+        ]
+      },
+      {
+        id: 'ff-4',
+        words: [
+          { hangul: '대화', hanja: '對話', meaning: 'Conversation' },
+          { hangul: '전화', hanja: '電話', meaning: 'Telephone' },
+          { hangul: '화제', hanja: '話題', meaning: 'Topic of talk' }
+        ],
+        answerGlyph: '話', relatedSeqs: [31],
+        explanation: 'Both 火 (fire, 화재) and 話 (talk, 대화) sound identical ("화") in Hangul—notice the 言 speech radical on the left of 話!',
+        options: [
+          { glyph: '話', label: '화 · talk / speech' },
+          { glyph: '火', label: '화 · fire' },
+          { glyph: '言', label: '언 · say / words' },
+          { glyph: '口', label: '구 · mouth' }
+        ]
+      },
+      {
+        id: 'ff-5',
+        words: [
+          { hangul: '자동차', hanja: '自動車', meaning: 'Automobile' },
+          { hangul: '자전거', hanja: '自轉車', meaning: 'Bicycle' },
+          { hangul: '차선', hanja: '車線', meaning: 'Traffic lane' }
+        ],
+        answerGlyph: '車', relatedSeqs: [36],
+        explanation: 'Signature Sound-Shift! 車 is read "차" in motorcars/lanes (자동차, 차선) and "거" in bicycles (자전거)—one visual glyph unites both!',
+        options: [
+          { glyph: '車', label: '거 / 차 · vehicle / wheel' },
+          { glyph: '道', label: '도 · road / way' },
+          { glyph: '驛', label: '역 · station' },
+          { glyph: '旅', label: '려 / 여 · travel' }
+        ]
+      }
+    ];
+
+    const EXPLAINED_PASSAGES = [
+      {
+        id: 'ep-1',
+        title: 'Lunch',
+        fullKorean: '오늘 은행 앞에서 친구와 대화를 하고 식사를 했습니다.',
+        translation: 'Today in front of the bank, I had a conversation with a friend and had a meal.',
+        segments: [
+          { text: '오늘', isTarget: true, hanja: '今日 (concept)', meaning: 'Today', literal: 'Native Korean word parallel to 今日 (Now + day · 일)', roots: [{ glyph: '日', reading: '일', gloss: 'sun · day (#1)' }] },
+          { text: ' ', isTarget: false },
+          { text: '은행', isTarget: true, hanja: '銀行', meaning: 'Bank', literal: 'Silver (銀) + merchant guild (行)', roots: [{ glyph: '銀', reading: '은', gloss: 'silver · money (#40)' }] },
+          { text: ' 앞에서 친구와 ', isTarget: false },
+          { text: '대화', isTarget: true, hanja: '對話', meaning: 'Conversation', literal: 'Face-to-face (對) + talk (話)', roots: [{ glyph: '話', reading: '화', gloss: 'talk · speech (#31)' }] },
+          { text: '를 하고 ', isTarget: false },
+          { text: '식사', isTarget: true, hanja: '食事', meaning: 'Meal', literal: 'Eat (食) + affair (事)', roots: [{ glyph: '食', reading: '식', gloss: 'eat · food (#27)' }] },
+          { text: '를 했습니다.', isTarget: false }
+        ]
+      },
+      {
+        id: 'ep-2',
+        title: 'Countryside',
+        fullKorean: '주말에 자동차로 도로를 달려 산악과 하천이 있는 전원으로 여행을 갔습니다.',
+        translation: 'On the weekend, I drove an automobile along the roadway and took a trip to the countryside with mountains and streams.',
+        segments: [
+          { text: '주말에 ', isTarget: false },
+          { text: '자동차', isTarget: true, hanja: '自動車', meaning: 'Automobile', literal: 'Self (自) + move (動) + vehicle (車)', roots: [{ glyph: '車', reading: '거 / 차', gloss: 'car · vehicle (#36)' }] },
+          { text: '로 ', isTarget: false },
+          { text: '도로', isTarget: true, hanja: '道路', meaning: 'Roadway', literal: 'Road (道) + path (路)', roots: [{ glyph: '道', reading: '도', gloss: 'road · way (#38)' }] },
+          { text: '를 달려 ', isTarget: false },
+          { text: '산악', isTarget: true, hanja: '山岳', meaning: 'Mountains', literal: 'Mountain (山) + high peak (岳)', roots: [{ glyph: '山', reading: '산', gloss: 'mountain (#8)' }] },
+          { text: '과 ', isTarget: false },
+          { text: '하천', isTarget: true, hanja: '河川', meaning: 'River / Stream', literal: 'River (河) + stream (川)', roots: [{ glyph: '川', reading: '천', gloss: 'river (#9)' }] },
+          { text: '이 있는 ', isTarget: false },
+          { text: '전원', isTarget: true, hanja: '田園', meaning: 'Countryside', literal: 'Field (田) + garden (園)', roots: [{ glyph: '田', reading: '전', gloss: 'field · rice paddy (#10)' }] },
+          { text: '으로 ', isTarget: false },
+          { text: '여행', isTarget: true, hanja: '旅行', meaning: 'Travel / Trip', literal: 'Travel (旅) + go (行)', roots: [{ glyph: '旅', reading: '려 / 여', gloss: 'travel · journey (#39)' }] },
+          { text: '을 갔습니다.', isTarget: false }
+        ]
+      },
+      {
+        id: 'ep-3',
+        title: 'Station',
+        fullKorean: '역전 서점에서 독서할 책을 구매하고 음료를 마셨습니다.',
+        translation: 'At the bookstore in front of the station, I purchased a book to read and drank a beverage.',
+        segments: [
+          { text: '역전', isTarget: true, hanja: '驛前', meaning: 'In front of the station', literal: 'Station (驛) + front (前)', roots: [{ glyph: '驛', reading: '역', gloss: 'station (#37)' }] },
+          { text: ' 서점에서 ', isTarget: false },
+          { text: '독서', isTarget: true, hanja: '讀書', meaning: 'Reading', literal: 'Read (讀) + book (書)', roots: [{ glyph: '讀', reading: '독 / 두', gloss: 'read (#33)' }, { glyph: '書', reading: '서', gloss: 'write · book (#32)' }] },
+          { text: '할 책을 ', isTarget: false },
+          { text: '구매', isTarget: true, hanja: '購買', meaning: 'Purchase', literal: 'Buy (購) + buy (買)', roots: [{ glyph: '買', reading: '매', gloss: 'buy (#34)' }] },
+          { text: '하고 ', isTarget: false },
+          { text: '음료', isTarget: true, hanja: '飮料', meaning: 'Beverage', literal: 'Drink (飮) + ingredient (料)', roots: [{ glyph: '飮', reading: '음', gloss: 'drink (#28)' }] },
+          { text: '를 마셨습니다.', isTarget: false }
+        ]
+      }
+    ];
+
+    // =========================================================================
+    // 2. PERSISTENT APPLICATION STATE
+    // =========================================================================
+    const STORAGE_KEY = 'hanja_impact_pilot_v1';
+    const DEFAULT_MASTERY = {
+      introduced: [1, 2, 3, 4, 5],
+      readings: [1, 2, 4],
+      compounds: [2, 4],
+      reviewQueue: [6, 15]
+    };
+
+    function loadMastery() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && Array.isArray(parsed.introduced)) return parsed;
+        }
+      } catch (e) {}
+      return JSON.parse(JSON.stringify(DEFAULT_MASTERY));
+    }
+
+    function saveMastery() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.mastery));
+      } catch (e) {}
+    }
+
+    const state = {
+      activeTab: 'home', // 'home' | 'cards' | 'games' | 'review' | 'texts' | 'explorer'
+      cardIndex: 0,
+      gameMode: 'meaning', // 'meaning' | 'build' | 'family'
+      meaningSeed: 0,
+      buildIdx: 0,
+      familyIdx: 0,
+      gameChoice: null,
+      gameCorrect: null,
+      reviewChoice: null,
+      passageIdx: 0,
+      activeSegmentIdx: 0,
+      sortBy: 'seq', // 'seq' | 'phonetic'
+      searchQuery: '',
+      mastery: loadMastery()
+    };
+
+    // =========================================================================
+    // 3. KOREAN AUDIO PRONUNCIATION (WEB SPEECH API + VISUAL TOAST)
+    // =========================================================================
+    let toastTimer = null;
+    function speakKorean(text) {
+      const cleanText = String(text || '').replace(/\s*\/\s*/g, ', ');
+      const toast = document.getElementById('speechToast');
+      const toastText = document.getElementById('speechToastText');
+      if (toast && toastText) {
+        toastText.textContent = 'Korean Audio: ' + cleanText;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+        }, 1600);
+      }
+
+      try {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const utter = new SpeechSynthesisUtterance(cleanText);
+          utter.lang = 'ko-KR';
+          utter.rate = 0.88;
+          const voices = window.speechSynthesis.getVoices();
+          const koVoice = voices.find(v => v.lang && v.lang.toLowerCase().includes('ko'));
+          if (koVoice) utter.voice = koVoice;
+          window.speechSynthesis.speak(utter);
+        }
+      } catch (e) {}
+    }
+
+    // =========================================================================
+    // 4. MASTERY MUTATIONS
+    // =========================================================================
+    function markMastered(seqs, dims) {
+      const arr = Array.isArray(seqs) ? seqs : [seqs];
+      arr.forEach(seq => {
+        if (dims.includes('introduced') && !state.mastery.introduced.includes(seq)) {
+          state.mastery.introduced.push(seq);
+        }
+        if (dims.includes('reading') && !state.mastery.readings.includes(seq)) {
+          state.mastery.readings.push(seq);
+        }
+        if (dims.includes('compound') && !state.mastery.compounds.includes(seq)) {
+          state.mastery.compounds.push(seq);
+        }
+      });
+      saveMastery();
+    }
+
+    function addToReview(seqs) {
+      const arr = Array.isArray(seqs) ? seqs : [seqs];
+      arr.forEach(seq => {
+        if (!state.mastery.reviewQueue.includes(seq)) {
+          state.mastery.reviewQueue.push(seq);
+        }
+      });
+      saveMastery();
+    }
+
+    function resolveReview(seq) {
+      markMastered([seq], ['introduced', 'reading', 'compound']);
+      state.mastery.reviewQueue = state.mastery.reviewQueue.filter(id => id !== seq);
+      saveMastery();
+    }
+
+    function getContinueAction() {
+      if (state.mastery.reviewQueue.length > 0) {
+        const firstDue = PILOT_DATASET.find(c => c.seq === state.mastery.reviewQueue[0]) || PILOT_DATASET[0];
+        const count = state.mastery.reviewQueue.length;
+        return {
+          type: 'review',
+          badge: 'Priority Recall',
+          label: `Review ${count} Due ${count === 1 ? 'Character' : 'Characters'}`,
+          sublabel: `Up next in My Review: ${firstDue.glyph} (${firstDue.hangul} · ${firstDue.meanings.split(' · ')[0]})`
+        };
+      }
+      const nextIdx = PILOT_DATASET.findIndex(c => !state.mastery.introduced.includes(c.seq));
+      if (nextIdx !== -1) {
+        const c = PILOT_DATASET[nextIdx];
+        return {
+          type: 'learn',
+          index: nextIdx,
+          badge: `Unit ${c.unit} Lesson`,
+          label: `Continue to #${c.seq}: ${c.glyph} (${c.hangul})`,
+          sublabel: `Unit ${c.unit}: ${UNIT_TITLES[c.unit]} — "${c.meanings}"`
+        };
+      }
+      return {
+        type: 'practice',
+        badge: 'Mastery Practice',
+        label: 'Play "Find the Family" Challenge',
+        sublabel: 'All 40 pilot characters introduced! Reinforce compound word families.'
+      };
+    }
+
+    // =========================================================================
+    // 5. VIEW RENDERERS
+    // =========================================================================
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderMasteryBar(label, count, total, barClass, bgClass) {
+      const pct = Math.min(100, Math.round((count / total) * 100));
+      return `
+        <div>
+          <div class="flex items-center justify-between text-xs mb-1.5">
+            <span class="font-semibold text-slate-700">${label}</span>
+            <span class="font-bold text-slate-900">${count} <span class="text-slate-400 font-normal">/ ${total}</span> (${pct}%)</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full overflow-hidden ${bgClass}">
+            <div class="h-full rounded-full transition-all duration-500 ${barClass}" style="width: ${pct}%"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderHome() {
+      const next = getContinueAction();
+      const dueCount = state.mastery.reviewQueue.length;
+      const unitsHtml = [1,2,3,4,5,6,7,8].map(u => {
+        const chars = PILOT_DATASET.filter(c => c.unit === u);
+        const learned = chars.filter(c => state.mastery.introduced.includes(c.seq)).length;
+        return `
+          <button data-action="open-unit" data-unit="${u}" class="min-h-[68px] p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 text-left flex items-center justify-between gap-2 shadow-sm transition cursor-pointer">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-indigo-700">Unit ${u}</span>
+                <span class="text-xs text-slate-400">·</span>
+                <span class="text-xs font-semibold text-slate-700">${UNIT_TITLES[u]}</span>
+              </div>
+              <div class="mt-1 text-base font-bold text-slate-900 tracking-widest hanja-serif">
+                ${chars.map(c => c.glyph).join(' ')}
+              </div>
+            </div>
+            <span class="inline-block px-2.5 py-1 rounded-lg text-xs font-bold ${learned === 5 ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-700'}">
+              ${learned}/5
+            </span>
+          </button>
+        `;
+      }).join('');
+
+      return `
+        <div class="space-y-6">
+          <!-- HERO CONTINUE CTA -->
+          <section class="rounded-3xl bg-gradient-to-br from-indigo-950 via-indigo-900 to-slate-900 text-white p-5 sm:p-6 shadow-lg">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400/20 text-amber-200 border border-amber-300/30">
+                ✦ ${escapeHtml(next.badge)}
+              </span>
+              <span class="text-xs text-indigo-200">Mobile-Ready · Untimed</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold tracking-tight leading-snug">
+              Unlock Korean Vocabulary Through Hanja Roots
+            </h2>
+            <p class="text-sm text-indigo-200 mt-1.5 leading-relaxed">${escapeHtml(next.sublabel)}</p>
+            <button data-action="smart-continue" class="mt-5 w-full min-h-[56px] rounded-2xl bg-amber-400 hover:bg-amber-300 active:scale-[0.99] text-slate-950 font-bold text-base px-5 py-3.5 shadow-md flex items-center justify-between transition cursor-pointer">
+              <span>▶ ${escapeHtml(next.label)}</span>
+              <span>→</span>
+            </button>
+          </section>
+
+          <!-- TRUE MASTERY METRICS -->
+          <section class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <div>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-800">True Mastery Metrics</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Tracked across 3 knowledge dimensions</p>
+              </div>
+              ${dueCount > 0 ? `
+                <button data-action="nav" data-tab="review" class="px-3 py-1.5 min-h-[36px] rounded-xl bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold cursor-pointer">
+                  ↻ ${dueCount} Due
+                </button>
+              ` : ''}
+            </div>
+            <div class="space-y-3.5">
+              ${renderMasteryBar('Characters Introduced', state.mastery.introduced.length, 40, 'bg-indigo-600', 'bg-indigo-100')}
+              ${renderMasteryBar('Korean Readings Remembered', state.mastery.readings.length, 40, 'bg-emerald-600', 'bg-emerald-100')}
+              ${renderMasteryBar('Compounds Understood', state.mastery.compounds.length, 40, 'bg-amber-500', 'bg-amber-100')}
+            </div>
+          </section>
+
+          <!-- 3 PRACTICE GAMES -->
+          <section class="space-y-2.5">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-slate-700">3 Core Practice Games</h3>
+              <span class="text-xs text-slate-500">Auto-saves misses to Review</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <button data-action="open-game" data-mode="meaning" class="min-h-[84px] p-4 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 shadow-sm text-left flex sm:flex-col justify-between items-center sm:items-start gap-3 transition cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-indigo-600 uppercase">Game 1</span>
+                  <h4 class="font-bold text-slate-900 text-sm mt-0.5">Find the Meaning</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Match glyph to English sense</p>
+                </div>
+                <span class="text-2xl font-bold text-indigo-950 bg-indigo-50 px-3 py-1.5 rounded-xl hanja-serif">水</span>
+              </button>
+
+              <button data-action="open-game" data-mode="build" class="min-h-[84px] p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-400 shadow-sm text-left flex sm:flex-col justify-between items-center sm:items-start gap-3 transition cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-emerald-600 uppercase">Game 2</span>
+                  <h4 class="font-bold text-slate-900 text-sm mt-0.5">Build the Word</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Combine 2 roots into Korean</p>
+                </div>
+                <span class="text-lg font-bold text-emerald-950 bg-emerald-50 px-2.5 py-1.5 rounded-xl hanja-serif">讀+書</span>
+              </button>
+
+              <button data-action="open-game" data-mode="family" class="min-h-[84px] p-4 rounded-2xl bg-white border border-slate-200 hover:border-amber-400 shadow-sm text-left flex sm:flex-col justify-between items-center sm:items-start gap-3 transition cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-amber-600 uppercase">Game 3 · Signature</span>
+                  <h4 class="font-bold text-slate-900 text-sm mt-0.5">Find the Family</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Spot shared root across 3 words</p>
+                </div>
+                <span class="text-2xl font-bold text-amber-950 bg-amber-50 px-3 py-1.5 rounded-xl hanja-serif">學</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- EXPLAINED TEXTS BANNER -->
+          <section class="rounded-2xl bg-indigo-50 border border-indigo-200 p-4 flex items-center justify-between gap-3">
+            <div class="space-y-0.5">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 text-[10px] font-bold uppercase bg-indigo-700 text-white rounded-md">Phase 2 Preview</span>
+                <h4 class="font-bold text-sm text-indigo-950">Explained Korean Passages</h4>
+              </div>
+              <p class="text-xs text-indigo-900/80">Tap Sino-Korean words like 은행, 대화, and 식사 inside real sentences.</p>
+            </div>
+            <button data-action="nav" data-tab="texts" class="min-h-[46px] px-4 rounded-xl bg-indigo-700 hover:bg-indigo-800 text-white text-xs font-bold shrink-0 cursor-pointer">
+              Read Now
+            </button>
+          </section>
+
+          <!-- 8 PILOT UNITS -->
+          <section class="space-y-2.5">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-slate-700">8 Pilot Units (1–40)</h3>
+              <button data-action="nav" data-tab="explorer" class="text-xs font-semibold text-indigo-700 hover:underline cursor-pointer">
+                Phonetic Table →
+              </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              ${unitsHtml}
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderCards() {
+      const card = PILOT_DATASET[state.cardIndex] || PILOT_DATASET[0];
+      const isMastered = state.mastery.introduced.includes(card.seq) &&
+        state.mastery.readings.includes(card.seq) &&
+        state.mastery.compounds.includes(card.seq);
+      const inReview = state.mastery.reviewQueue.includes(card.seq);
+
+      const unitPills = [1,2,3,4,5,6,7,8].map(u => `
+        <button data-action="open-unit" data-unit="${u}" class="min-h-[40px] px-3.5 rounded-xl text-xs font-bold shrink-0 transition cursor-pointer ${
+          card.unit === u ? 'bg-indigo-950 text-amber-300 shadow-sm' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
+        }">
+          Unit ${u}
+        </button>
+      `).join('');
+
+      return `
+        <div class="space-y-4">
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
+            ${unitPills}
+          </div>
+
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="px-5 pt-5 pb-3 flex items-center justify-between border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-lg bg-slate-100 text-slate-800 font-bold text-xs">#${card.seq} / 40</span>
+                <span class="text-xs font-medium text-slate-500">Unit ${card.unit} · ${UNIT_TITLES[card.unit]}</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                ${card.qaFixed ? `<span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">QA Cleaned</span>` : ''}
+                ${isMastered ? `<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">✓ Mastered</span>` : ''}
+                ${inReview ? `<span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">★ In Review</span>` : ''}
+              </div>
+            </div>
+
+            <div class="px-6 py-7 flex flex-col items-center text-center">
+              <button data-action="speak" data-speech="${escapeHtml(card.hangul)}" class="min-h-[48px] px-5 py-2 rounded-2xl bg-slate-50 hover:bg-indigo-50 border border-slate-200 text-slate-900 flex items-center gap-2.5 transition cursor-pointer">
+                <span class="text-2xl font-bold tracking-tight">${escapeHtml(card.hangul)}</span>
+                <span class="text-sm text-slate-500 font-medium">(${escapeHtml(card.roman)})</span>
+                <span class="text-indigo-600 font-bold">🔊</span>
+              </button>
+
+              <div class="my-5 text-8xl sm:text-9xl font-bold text-slate-950 select-all leading-none hanja-serif">
+                ${card.glyph}
+              </div>
+
+              <div class="text-lg sm:text-xl font-bold text-indigo-950 tracking-tight">
+                ${escapeHtml(card.meanings)}
+              </div>
+
+              ${card.soundLawNote ? `
+                <div class="mt-3 max-w-md bg-amber-50 border border-amber-200 rounded-xl px-3.5 py-2 text-xs text-amber-950 text-left">
+                  <strong>Note:</strong> ${escapeHtml(card.soundLawNote)}
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="bg-slate-900 text-white p-5">
+              <div class="flex items-center justify-between gap-3">
+                <div class="space-y-1">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 block">Verified Korean Compound</span>
+                  <div class="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                    <span class="text-xl font-bold text-white">${escapeHtml(card.displayCompoundHangul || card.compoundHangul)}</span>
+                    <span class="text-slate-400">·</span>
+                    <span class="text-lg font-semibold text-amber-200 hanja-serif">${escapeHtml(card.displayCompoundHanja || card.compoundHanja)}</span>
+                    <span class="text-slate-400">·</span>
+                    <span class="text-base font-semibold text-emerald-300">${escapeHtml(card.naturalMeaning)}</span>
+                  </div>
+                  <p class="text-xs text-slate-300 pt-0.5">
+                    <span class="text-slate-400 font-medium">Literal Root Breakdown:</span> ${escapeHtml(card.literalGloss)}
+                  </p>
+                </div>
+
+                <button data-action="speak" data-speech="${escapeHtml(card.speechCompound || card.compoundHangul)}" class="min-h-[52px] min-w-[52px] rounded-2xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-slate-700 flex items-center justify-center text-xl shrink-0 transition cursor-pointer" aria-label="Speak compound">
+                  🔊
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <button data-action="card-review" data-seq="${card.seq}" class="min-h-[52px] rounded-2xl bg-white border-2 border-rose-200 hover:border-rose-400 text-rose-700 font-bold text-sm px-4 flex items-center justify-center gap-2 transition cursor-pointer">
+              ★ Add to My Review
+            </button>
+            <button data-action="card-got-it" data-seq="${card.seq}" class="min-h-[52px] rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 flex items-center justify-center gap-2 shadow-sm transition cursor-pointer">
+              ✓ Got It · Next
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between gap-2 pt-1">
+            <button data-action="card-prev" class="min-h-[48px] px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 font-semibold text-sm cursor-pointer">
+              ← Prev
+            </button>
+            ${card.seq % 5 === 0 ? `
+              <button data-action="open-game" data-mode="meaning" class="min-h-[48px] px-4 rounded-xl bg-indigo-950 text-amber-300 font-bold text-xs sm:text-sm cursor-pointer">
+                Unit ${card.unit} Checkpoint Quiz →
+              </button>
+            ` : `
+              <span class="text-xs text-slate-500 font-medium">Phonetic Sort: #${card.sortKey}</span>
+            `}
+            <button data-action="card-next" class="min-h-[48px] px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 font-semibold text-sm cursor-pointer">
+              Next →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function getMeaningQuestion() {
+      const targetIdx = (state.meaningSeed * 7 + 3) % PILOT_DATASET.length;
+      const target = PILOT_DATASET[targetIdx];
+      const distractors = [];
+      let step = 5;
+      while (distractors.length < 3) {
+        const cand = PILOT_DATASET[(targetIdx + step) % PILOT_DATASET.length];
+        if (cand.seq !== target.seq && cand.meanings !== target.meanings) {
+          distractors.push(cand);
+        }
+        step += 6;
+      }
+      const options = [target, ...distractors]
+        .map((item, idx) => ({ item, order: ((state.meaningSeed + 1) * (idx + 3) * 13) % 29 }))
+        .sort((a, b) => a.order - b.order)
+        .map(x => x.item);
+      return { target, options };
+    }
+
+    function renderGames() {
+      const modeTabs = `
+        <div class="grid grid-cols-3 gap-2 bg-slate-200/70 p-1.5 rounded-2xl">
+          <button data-action="switch-game" data-mode="meaning" class="min-h-[46px] rounded-xl text-xs font-bold px-2 transition cursor-pointer ${state.gameMode === 'meaning' ? 'bg-white text-indigo-950 shadow-sm' : 'text-slate-600'}">1. Meaning</button>
+          <button data-action="switch-game" data-mode="build" class="min-h-[46px] rounded-xl text-xs font-bold px-2 transition cursor-pointer ${state.gameMode === 'build' ? 'bg-white text-emerald-950 shadow-sm' : 'text-slate-600'}">2. Build Word</button>
+          <button data-action="switch-game" data-mode="family" class="min-h-[46px] rounded-xl text-xs font-bold px-2 transition cursor-pointer ${state.gameMode === 'family' ? 'bg-white text-amber-950 shadow-sm' : 'text-slate-600'}">3. Word Family</button>
+        </div>
+      `;
+
+      let bodyHtml = '';
+
+      if (state.gameMode === 'meaning') {
+        const q = getMeaningQuestion();
+        const optsHtml = q.options.map(opt => {
+          const picked = state.gameChoice === String(opt.seq);
+          const right = opt.seq === q.target.seq;
+          let cls = 'bg-slate-50 hover:bg-indigo-50 border-slate-200 text-slate-900';
+          if (state.gameChoice !== null) {
+            if (right) cls = 'bg-emerald-50 border-emerald-500 text-emerald-950 font-bold';
+            else if (picked) cls = 'bg-rose-50 border-rose-400 text-rose-900';
+            else cls = 'bg-slate-50 border-slate-200 text-slate-400 opacity-70';
+          }
+          return `
+            <button data-action="pick-meaning" data-seq="${opt.seq}" ${state.gameChoice !== null ? 'disabled' : ''} class="min-h-[54px] px-4 py-3 rounded-2xl border-2 text-left text-base font-semibold flex items-center justify-between transition cursor-pointer ${cls}">
+              <span>${escapeHtml(opt.meanings)}</span>
+              ${state.gameChoice !== null && right ? '<span class="text-emerald-600 font-bold">✓</span>' : ''}
+              ${state.gameChoice !== null && picked && !right ? '<span class="text-rose-600 font-bold">✕</span>' : ''}
+            </button>
+          `;
+        }).join('');
+
+        const exp = `${q.target.glyph} reads "${q.target.hangul}" (${q.target.roman}) and means "${q.target.meanings}". Anchor compound: ${q.target.compoundHangul} (${q.target.compoundHanja}) — ${q.target.naturalMeaning} [${q.target.literalGloss}].`;
+
+        bodyHtml = `
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Game 1 · Find the Meaning</span>
+              <button data-action="speak" data-speech="${escapeHtml(q.target.hangul)}" class="min-h-[40px] px-3 rounded-xl bg-slate-100 hover:bg-indigo-50 text-slate-700 text-xs font-semibold cursor-pointer">
+                🔊 Hint (${escapeHtml(q.target.hangul)})
+              </button>
+            </div>
+            <div class="py-4 text-center">
+              <div class="text-8xl font-bold text-slate-950 hanja-serif">${q.target.glyph}</div>
+              <p class="text-xs text-slate-500 mt-3">Tap the English meaning that matches this Hanja character</p>
+            </div>
+            <div class="grid grid-cols-1 gap-2.5">${optsHtml}</div>
+            ${state.gameChoice !== null ? renderGameFeedback(exp) : ''}
+          </div>
+        `;
+      } else if (state.gameMode === 'build') {
+        const bw = BUILD_WORD_DECK[state.buildIdx % BUILD_WORD_DECK.length];
+        const sortedOpts = [...bw.options].sort((a, b) => a.hangul.localeCompare(b.hangul, 'ko'));
+        const optsHtml = sortedOpts.map(opt => {
+          const picked = state.gameChoice === opt.hangul;
+          const right = opt.hangul === bw.answerHangul;
+          let cls = 'bg-slate-50 hover:bg-emerald-50 border-slate-200 text-slate-900';
+          if (state.gameChoice !== null) {
+            if (right) cls = 'bg-emerald-50 border-emerald-500 text-emerald-950';
+            else if (picked) cls = 'bg-rose-50 border-rose-400 text-rose-900';
+            else cls = 'bg-slate-50 border-slate-200 text-slate-400 opacity-70';
+          }
+          return `
+            <button data-action="pick-build" data-hangul="${escapeHtml(opt.hangul)}" ${state.gameChoice !== null ? 'disabled' : ''} class="min-h-[56px] px-4 py-3 rounded-2xl border-2 flex items-center justify-between transition cursor-pointer ${cls}">
+              <div class="flex items-center gap-3">
+                <span class="text-lg font-bold">${escapeHtml(opt.hangul)}</span>
+                <span class="text-slate-300">|</span>
+                <span class="text-sm font-semibold">${escapeHtml(opt.meaning)}</span>
+              </div>
+              ${state.gameChoice !== null && right ? '<span class="text-emerald-600 font-bold">✓</span>' : ''}
+              ${state.gameChoice !== null && picked && !right ? '<span class="text-rose-600 font-bold">✕</span>' : ''}
+            </button>
+          `;
+        }).join('');
+
+        const exp = `${bw.hanjaPair} → ${bw.answerHangul} (${bw.answerMeaning}). Literal logic: ${bw.literal}.`;
+
+        bodyHtml = `
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Game 2 · Build the Compound</span>
+              <span class="text-xs text-slate-400 font-medium">${(state.buildIdx % BUILD_WORD_DECK.length) + 1} / ${BUILD_WORD_DECK.length}</span>
+            </div>
+            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-4 flex items-center justify-center gap-4 text-center">
+              <div class="space-y-1">
+                <div class="text-5xl sm:text-6xl font-bold text-slate-950 hanja-serif">${bw.leftGlyph}</div>
+                <div class="text-xs font-semibold text-slate-600">${escapeHtml(bw.leftHint)}</div>
+              </div>
+              <div class="text-2xl font-bold text-slate-400">+</div>
+              <div class="space-y-1">
+                <div class="text-5xl sm:text-6xl font-bold text-slate-950 hanja-serif">${bw.rightGlyph}</div>
+                <div class="text-xs font-semibold text-slate-600">${escapeHtml(bw.rightHint)}</div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-2.5">${optsHtml}</div>
+            ${state.gameChoice !== null ? renderGameFeedback(exp) : ''}
+          </div>
+        `;
+      } else {
+        const ff = FIND_FAMILY_DECK[state.familyIdx % FIND_FAMILY_DECK.length];
+        const wordsHtml = ff.words.map(w => `
+          <button data-action="speak" data-speech="${escapeHtml(w.hangul)}" class="min-h-[72px] p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50 border border-slate-200 text-left flex sm:flex-col justify-between items-center sm:items-start transition cursor-pointer">
+            <div>
+              <div class="text-lg font-bold text-slate-950 flex items-center gap-1.5">
+                <span>${escapeHtml(w.hangul)}</span>
+                ${state.gameChoice !== null ? `<span class="text-xs font-normal text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded hanja-serif">${w.hanja}</span>` : ''}
+              </div>
+              <div class="text-xs text-slate-600 font-medium mt-0.5">${escapeHtml(w.meaning)}</div>
+            </div>
+            <span class="text-amber-700 text-sm">🔊</span>
+          </button>
+        `).join('');
+
+        const optsHtml = ff.options.map(opt => {
+          const picked = state.gameChoice === opt.glyph;
+          const right = opt.glyph === ff.answerGlyph;
+          let cls = 'bg-slate-50 hover:bg-amber-50 border-slate-200 text-slate-900';
+          if (state.gameChoice !== null) {
+            if (right) cls = 'bg-emerald-50 border-emerald-500 text-emerald-950';
+            else if (picked) cls = 'bg-rose-50 border-rose-400 text-rose-900';
+            else cls = 'bg-slate-50 border-slate-200 text-slate-400 opacity-70';
+          }
+          return `
+            <button data-action="pick-family" data-glyph="${opt.glyph}" ${state.gameChoice !== null ? 'disabled' : ''} class="min-h-[70px] p-3 rounded-2xl border-2 flex items-center gap-3 text-left transition cursor-pointer ${cls}">
+              <span class="text-3xl font-bold shrink-0 hanja-serif">${opt.glyph}</span>
+              <span class="text-xs font-bold leading-snug">${escapeHtml(opt.label)}</span>
+            </button>
+          `;
+        }).join('');
+
+        bodyHtml = `
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Game 3 · Find the Word Family</span>
+              <span class="text-xs text-slate-400 font-medium">${(state.familyIdx % FIND_FAMILY_DECK.length) + 1} / ${FIND_FAMILY_DECK.length}</span>
+            </div>
+            <p class="text-xs text-slate-600">All three Korean words share one underlying Hanja root. Tap any word to hear it, then pick the shared root:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">${wordsHtml}</div>
+            <div class="grid grid-cols-2 gap-2.5">${optsHtml}</div>
+            ${state.gameChoice !== null ? renderGameFeedback(ff.explanation) : ''}
+          </div>
+        `;
+      }
+
+      return `<div class="space-y-4">${modeTabs}${bodyHtml}</div>`;
+    }
+
+    function renderGameFeedback(explanation) {
+      const ok = state.gameCorrect;
+      const due = state.mastery.reviewQueue.length;
+      return `
+        <div class="rounded-2xl p-4 border space-y-3 ${ok ? 'bg-emerald-50 border-emerald-300 text-emerald-950' : 'bg-rose-50 border-rose-300 text-rose-950'}">
+          <div class="font-bold text-sm">
+            ${ok ? '✓ Spot on! Mastery updated.' : '★ Added to My Review for spaced recall'}
+          </div>
+          <p class="text-xs leading-relaxed">${escapeHtml(explanation)}</p>
+          <div class="flex items-center gap-2 pt-1">
+            ${!ok && due > 0 ? `
+              <button data-action="nav" data-tab="review" class="min-h-[46px] px-3.5 rounded-xl bg-white border border-rose-300 text-rose-800 font-bold text-xs cursor-pointer">
+                My Review (${due})
+              </button>
+            ` : ''}
+            <button data-action="next-game-prompt" class="flex-1 min-h-[46px] rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm cursor-pointer">
+              Next Prompt →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderReview() {
+      const dueItems = state.mastery.reviewQueue
+        .map(seq => PILOT_DATASET.find(c => c.seq === seq))
+        .filter(Boolean);
+      const active = dueItems[0];
+
+      if (!active) {
+        return `
+          <div class="bg-white rounded-3xl border border-slate-200 p-8 text-center space-y-4 shadow-sm">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center text-2xl font-bold">✓</div>
+            <h2 class="text-xl font-bold text-slate-900">My Review Queue Is Clear!</h2>
+            <p class="text-sm text-slate-600 max-w-sm mx-auto">Every missed or bookmarked character has been resolved and credited toward your Mastery counters.</p>
+            <button data-action="nav" data-tab="home" class="min-h-[50px] px-6 rounded-2xl bg-indigo-950 text-amber-300 font-bold text-sm cursor-pointer">
+              Back to Home Dashboard →
+            </button>
+          </div>
+        `;
+      }
+
+      const distractors = [];
+      let step = 7;
+      while (distractors.length < 3) {
+        const cand = PILOT_DATASET[(active.seq + step) % PILOT_DATASET.length];
+        if (cand.seq !== active.seq && !distractors.some(d => d.seq === cand.seq)) {
+          distractors.push(cand);
+        }
+        step += 5;
+      }
+      const options = [active, ...distractors].sort((a, b) => a.seq - b.seq);
+
+      const optsHtml = options.map(opt => {
+        const picked = state.reviewChoice === opt.seq;
+        const right = opt.seq === active.seq;
+        let cls = 'bg-slate-50 hover:bg-indigo-50 border-slate-200 text-slate-900';
+        if (state.reviewChoice !== null) {
+          if (right) cls = 'bg-emerald-50 border-emerald-500 text-emerald-950';
+          else if (picked) cls = 'bg-rose-50 border-rose-400 text-rose-900';
+          else cls = 'bg-slate-50 border-slate-200 text-slate-400 opacity-65';
+        }
+        return `
+          <button data-action="pick-review" data-seq="${opt.seq}" ${state.reviewChoice !== null ? 'disabled' : ''} class="w-full min-h-[58px] p-3.5 rounded-2xl border-2 text-left flex items-center justify-between gap-2 transition cursor-pointer ${cls}">
+            <div>
+              <div class="text-sm font-bold">${escapeHtml(opt.hangul)} (${escapeHtml(opt.roman)}) — ${escapeHtml(opt.meanings)}</div>
+              <div class="text-xs opacity-80 mt-0.5">Compound: ${escapeHtml(opt.compoundHangul)} · ${escapeHtml(opt.naturalMeaning)}</div>
+            </div>
+            ${state.reviewChoice !== null && right ? '<span class="text-emerald-600 font-bold">✓</span>' : ''}
+          </button>
+        `;
+      }).join('');
+
+      return `
+        <div class="space-y-4">
+          <div class="flex items-center justify-between px-1">
+            <div>
+              <h2 class="text-base font-bold text-slate-900">My Review Queue (${dueItems.length} Due)</h2>
+              <p class="text-xs text-slate-500">Answer correctly to clear from queue & credit Mastery</p>
+            </div>
+            <button data-action="jump-card" data-seq="${active.seq}" class="min-h-[40px] px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-semibold text-slate-700 cursor-pointer">
+              Study Card #${active.seq}
+            </button>
+          </div>
+
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm space-y-5">
+            <div class="text-center py-3">
+              <span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-bold">Recall Check · #${active.seq}</span>
+              <div class="text-8xl font-bold text-slate-950 my-4 hanja-serif">${active.glyph}</div>
+              <p class="text-xs text-slate-500">Match Korean reading, core meaning, and compound:</p>
+            </div>
+
+            <div class="space-y-2.5">${optsHtml}</div>
+
+            ${state.reviewChoice !== null ? (
+              state.reviewChoice === active.seq ? `
+                <button data-action="clear-review" data-seq="${active.seq}" class="w-full min-h-[50px] rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm cursor-pointer">
+                  ✓ Clear #${active.seq} from Review & Increment Mastery
+                </button>
+              ` : `
+                <button data-action="retry-review" class="w-full min-h-[50px] rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm cursor-pointer">
+                  ↻ Try #${active.seq} Again to Clear
+                </button>
+              `
+            ) : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderTexts() {
+      const passage = EXPLAINED_PASSAGES[state.passageIdx] || EXPLAINED_PASSAGES[0];
+      const targetSegs = passage.segments.map((s, idx) => ({ ...s, idx })).filter(s => s.isTarget);
+      const activeSeg = passage.segments[state.activeSegmentIdx]?.isTarget
+        ? passage.segments[state.activeSegmentIdx]
+        : targetSegs[0];
+
+      const tabsHtml = EXPLAINED_PASSAGES.map((p, idx) => `
+        <button data-action="select-passage" data-idx="${idx}" class="min-h-[44px] px-2.5 py-2 rounded-xl text-xs font-bold border transition cursor-pointer ${
+          state.passageIdx === idx ? 'bg-indigo-950 text-amber-300 border-indigo-950' : 'bg-white text-slate-700 border-slate-200'
+        }">
+          ${idx + 1}. ${escapeHtml(p.title)}
+        </button>
+      `).join('');
+
+      const sentenceHtml = passage.segments.map((seg, idx) => {
+        if (!seg.isTarget) return `<span>${escapeHtml(seg.text)}</span>`;
+        const selected = activeSeg && activeSeg.text === seg.text;
+        return `
+          <button data-action="select-segment" data-idx="${idx}" data-speech="${escapeHtml(seg.text)}" class="mx-0.5 px-2 py-0.5 rounded-xl font-bold border-b-2 transition cursor-pointer ${
+            selected ? 'bg-amber-200 border-amber-600 text-slate-950' : 'bg-indigo-50 hover:bg-indigo-100 border-indigo-300 text-indigo-950'
+          }">${escapeHtml(seg.text)}</button>
+        `;
+      }).join('');
+
+      return `
+        <div class="space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-700">Phase 2 Feature Preview</span>
+              <h2 class="text-lg font-bold text-slate-900">Explained Korean Passages</h2>
+            </div>
+            <button data-action="speak" data-speech="${escapeHtml(passage.fullKorean)}" class="min-h-[44px] px-3.5 rounded-xl bg-indigo-100 hover:bg-indigo-200 text-indigo-900 font-bold text-xs cursor-pointer">
+              🔊 Read Sentence
+            </button>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2">${tabsHtml}</div>
+
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm space-y-4">
+            <p class="text-xs text-slate-500 font-medium">Tap any highlighted Sino-Korean word to inspect its underlying Hanja roots:</p>
+            <div class="leading-loose text-xl sm:text-2xl font-medium text-slate-900">${sentenceHtml}</div>
+            <div class="pt-2 border-t border-slate-100 text-sm text-slate-600 italic">“${escapeHtml(passage.translation)}”</div>
+          </div>
+
+          ${activeSeg ? `
+            <div class="bg-slate-900 text-white rounded-3xl p-5 shadow-md space-y-4">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-2xl font-bold text-white">${escapeHtml(activeSeg.text)}</span>
+                    <span class="text-xl font-semibold text-amber-300 hanja-serif">${escapeHtml(activeSeg.hanja)}</span>
+                  </div>
+                  <div class="text-base font-bold text-emerald-300 mt-0.5">${escapeHtml(activeSeg.meaning)}</div>
+                  <p class="text-xs text-slate-300 mt-1">Literal Breakdown: ${escapeHtml(activeSeg.literal)}</p>
+                </div>
+                <button data-action="speak" data-speech="${escapeHtml(activeSeg.text)}" class="min-h-[48px] min-w-[48px] rounded-2xl bg-slate-800 text-amber-300 flex items-center justify-center cursor-pointer">🔊</button>
+              </div>
+              <div class="space-y-2 pt-2 border-t border-slate-800">
+                ${activeSeg.roots.map(r => `
+                  <div class="bg-slate-800 rounded-2xl p-3 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                      <span class="w-11 h-11 rounded-xl bg-indigo-950 text-amber-300 flex items-center justify-center text-2xl font-bold hanja-serif">${r.glyph}</span>
+                      <div>
+                        <div class="text-sm font-bold text-white">${escapeHtml(r.reading)}</div>
+                        <div class="text-xs text-slate-300">${escapeHtml(r.gloss)}</div>
+                      </div>
+                    </div>
+                    <button data-action="jump-glyph" data-glyph="${r.glyph}" class="min-h-[40px] px-3 rounded-xl bg-amber-400 text-slate-950 text-xs font-bold shrink-0 cursor-pointer">Open Card</button>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    function renderExplorer() {
+      const q = state.searchQuery.trim().toLowerCase();
+      const filtered = PILOT_DATASET.filter(item => {
+        if (!q) return true;
+        return (
+          item.glyph.includes(q) ||
+          item.hangul.includes(q) ||
+          item.roman.toLowerCase().includes(q) ||
+          item.meanings.toLowerCase().includes(q) ||
+          item.compoundHangul.includes(q) ||
+          item.naturalMeaning.toLowerCase().includes(q)
+        );
+      }).sort((a, b) => {
+        if (state.sortBy === 'phonetic') {
+          if (a.sortKey !== b.sortKey) return a.sortKey - b.sortKey;
+        }
+        return a.seq - b.seq;
+      });
+
+      const listHtml = filtered.map(item => {
+        const learned = state.mastery.introduced.includes(item.seq);
+        const speechStr = `${item.primaryHangul || item.hangul}, ${item.speechCompound || item.compoundHangul}`;
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 p-3.5 flex items-center justify-between gap-3 shadow-sm">
+            <button data-action="jump-card" data-seq="${item.seq}" class="flex items-center gap-3.5 text-left flex-1 min-w-0 cursor-pointer">
+              <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-950 flex items-center justify-center text-2xl font-bold shrink-0 hanja-serif">
+                ${item.glyph}
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs font-bold text-slate-400">#${item.seq}</span>
+                  <span class="text-sm font-bold text-slate-900">${escapeHtml(item.hangul)}</span>
+                  <span class="text-xs text-slate-500">(${escapeHtml(item.roman)})</span>
+                  <span class="text-xs font-semibold text-indigo-700 truncate">${escapeHtml(item.meanings)}</span>
+                  ${learned ? '<span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>' : ''}
+                </div>
+                <div class="text-xs text-slate-600 mt-0.5 truncate">
+                  <span class="font-semibold text-slate-800">${escapeHtml(item.compoundHangul)}</span> (${item.compoundHanja}) · ${escapeHtml(item.naturalMeaning)}
+                </div>
+                ${state.sortBy === 'phonetic' ? `<div class="text-[10px] text-indigo-600 font-mono mt-0.5">phonetic_sort: ${item.sortKey}</div>` : ''}
+              </div>
+            </button>
+            <button data-action="speak" data-speech="${escapeHtml(speechStr)}" class="min-h-[44px] min-w-[44px] rounded-xl bg-slate-100 hover:bg-indigo-50 text-slate-700 flex items-center justify-center shrink-0 cursor-pointer">
+              🔊
+            </button>
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h2 class="text-lg font-bold text-slate-900">Pilot Dataset Explorer (1–40)</h2>
+              <p class="text-xs text-slate-500">Supports custom <code class="font-mono">hangul_phonetic_sort</code> ordering</p>
+            </div>
+            <button data-action="toggle-sort" class="min-h-[44px] px-3.5 rounded-xl bg-indigo-950 text-amber-300 text-xs font-bold self-start cursor-pointer">
+              ⇅ ${state.sortBy === 'seq' ? 'Sorted: Curriculum #1–40' : 'Sorted: Korean Phonetic (가나다)'}
+            </button>
+          </div>
+
+          <input id="explorerSearchInput" type="text" value="${escapeHtml(state.searchQuery)}" placeholder="Search Hanja, Hangul, romanization, or compound..." class="w-full min-h-[48px] px-4 rounded-2xl bg-white border border-slate-200 text-sm focus:outline-none focus:border-indigo-500" />
+
+          <div class="space-y-2">${listHtml}</div>
+        </div>
+      `;
+    }
+
+    function renderBottomNav() {
+      const due = state.mastery.reviewQueue.length;
+      const items = [
+        { id: 'home', label: 'Home', icon: '✦' },
+        { id: 'cards', label: 'Cards', icon: '📖' },
+        { id: 'games', label: 'Games', icon: '🎯' },
+        { id: 'review', label: 'My Review', icon: '↻', badge: due > 0 ? due : null },
+        { id: 'explorer', label: 'Dataset', icon: '🗂' }
+      ];
+      document.getElementById('bottomNav').innerHTML = items.map(item => `
+        <button data-action="nav" data-tab="${item.id}" class="relative min-h-[52px] rounded-xl flex flex-col items-center justify-center gap-0.5 transition cursor-pointer ${
+          state.activeTab === item.id ? 'bg-indigo-50 text-indigo-800 font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'
+        }">
+          <div class="relative text-base leading-none">
+            <span>${item.icon}</span>
+            ${item.badge ? `<span class="absolute -top-1.5 -right-3.5 min-w-[18px] h-[18px] px-1 rounded-full bg-rose-600 text-white text-[10px] font-bold flex items-center justify-center">${item.badge}</span>` : ''}
+          </div>
+          <span class="text-[11px] leading-tight mt-0.5">${item.label}</span>
+        </button>
+      `).join('');
+    }
+
+    function renderApp() {
+      const root = document.getElementById('appRoot');
+      if (state.activeTab === 'home') root.innerHTML = renderHome();
+      else if (state.activeTab === 'cards') root.innerHTML = renderCards();
+      else if (state.activeTab === 'games') root.innerHTML = renderGames();
+      else if (state.activeTab === 'review') root.innerHTML = renderReview();
+      else if (state.activeTab === 'texts') root.innerHTML = renderTexts();
+      else if (state.activeTab === 'explorer') root.innerHTML = renderExplorer();
+
+      renderBottomNav();
+
+      // Re-bind live search input if in explorer
+      const searchEl = document.getElementById('explorerSearchInput');
+      if (searchEl) {
+        searchEl.addEventListener('input', (e) => {
+          const pos = e.target.selectionStart;
+          state.searchQuery = e.target.value;
+          renderApp();
+          const nextSearchEl = document.getElementById('explorerSearchInput');
+          if (nextSearchEl) {
+            nextSearchEl.focus();
+            nextSearchEl.setSelectionRange(pos, pos);
+          }
+        });
+      }
+    }
+
+    // =========================================================================
+    // 6. UNIFIED EVENT DELEGATION & SHARE/DOWNLOAD HELPERS
+    // =========================================================================
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+
+      if (action === 'nav') {
+        state.activeTab = btn.getAttribute('data-tab');
+        state.reviewChoice = null;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        renderApp();
+      } else if (action === 'smart-continue') {
+        const next = getContinueAction();
+        if (next.type === 'review') state.activeTab = 'review';
+        else if (next.type === 'learn') {
+          state.cardIndex = next.index;
+          state.activeTab = 'cards';
+        } else {
+          state.gameMode = 'family';
+          state.gameChoice = null;
+          state.activeTab = 'games';
+        }
+        renderApp();
+      } else if (action === 'open-unit') {
+        const unit = Number(btn.getAttribute('data-unit'));
+        const idx = PILOT_DATASET.findIndex(c => c.unit === unit);
+        if (idx !== -1) state.cardIndex = idx;
+        state.activeTab = 'cards';
+        renderApp();
+      } else if (action === 'open-game') {
+        state.gameMode = btn.getAttribute('data-mode');
+        state.gameChoice = null;
+        state.gameCorrect = null;
+        state.activeTab = 'games';
+        renderApp();
+      } else if (action === 'switch-game') {
+        state.gameMode = btn.getAttribute('data-mode');
+        state.gameChoice = null;
+        state.gameCorrect = null;
+        renderApp();
+      } else if (action === 'speak') {
+        speakKorean(btn.getAttribute('data-speech'));
+      } else if (action === 'card-got-it') {
+        const seq = Number(btn.getAttribute('data-seq'));
+        markMastered([seq], ['introduced', 'reading', 'compound']);
+        state.cardIndex = (state.cardIndex + 1) % PILOT_DATASET.length;
+        renderApp();
+      } else if (action === 'card-review') {
+        const seq = Number(btn.getAttribute('data-seq'));
+        markMastered([seq], ['introduced']);
+        addToReview([seq]);
+        state.cardIndex = (state.cardIndex + 1) % PILOT_DATASET.length;
+        renderApp();
+      } else if (action === 'card-prev') {
+        state.cardIndex = state.cardIndex > 0 ? state.cardIndex - 1 : PILOT_DATASET.length - 1;
+        renderApp();
+      } else if (action === 'card-next') {
+        state.cardIndex = (state.cardIndex + 1) % PILOT_DATASET.length;
+        renderApp();
+      } else if (action === 'pick-meaning') {
+        if (state.gameChoice !== null) return;
+        const seq = Number(btn.getAttribute('data-seq'));
+        const q = getMeaningQuestion();
+        state.gameChoice = String(seq);
+        state.gameCorrect = seq === q.target.seq;
+        if (state.gameCorrect) markMastered([q.target.seq], ['introduced', 'reading']);
+        else addToReview([q.target.seq]);
+        renderApp();
+      } else if (action === 'pick-build') {
+        if (state.gameChoice !== null) return;
+        const hangul = btn.getAttribute('data-hangul');
+        const bw = BUILD_WORD_DECK[state.buildIdx % BUILD_WORD_DECK.length];
+        state.gameChoice = hangul;
+        state.gameCorrect = hangul === bw.answerHangul;
+        speakKorean(bw.answerHangul);
+        if (state.gameCorrect) markMastered(bw.relatedSeqs, ['introduced', 'compound']);
+        else addToReview(bw.relatedSeqs);
+        renderApp();
+      } else if (action === 'pick-family') {
+        if (state.gameChoice !== null) return;
+        const glyph = btn.getAttribute('data-glyph');
+        const ff = FIND_FAMILY_DECK[state.familyIdx % FIND_FAMILY_DECK.length];
+        state.gameChoice = glyph;
+        state.gameCorrect = glyph === ff.answerGlyph;
+        if (state.gameCorrect) markMastered(ff.relatedSeqs, ['introduced', 'reading', 'compound']);
+        else addToReview(ff.relatedSeqs);
+        renderApp();
+      } else if (action === 'next-game-prompt') {
+        state.gameChoice = null;
+        state.gameCorrect = null;
+        if (state.gameMode === 'meaning') state.meaningSeed++;
+        else if (state.gameMode === 'build') state.buildIdx++;
+        else state.familyIdx++;
+        renderApp();
+      } else if (action === 'pick-review') {
+        if (state.reviewChoice !== null) return;
+        const seq = Number(btn.getAttribute('data-seq'));
+        state.reviewChoice = seq;
+        const dueFirst = PILOT_DATASET.find(c => c.seq === state.mastery.reviewQueue[0]);
+        if (dueFirst) speakKorean(dueFirst.compoundHangul);
+        renderApp();
+      } else if (action === 'clear-review') {
+        const seq = Number(btn.getAttribute('data-seq'));
+        state.reviewChoice = null;
+        resolveReview(seq);
+        renderApp();
+      } else if (action === 'retry-review') {
+        state.reviewChoice = null;
+        renderApp();
+      } else if (action === 'jump-card') {
+        const seq = Number(btn.getAttribute('data-seq'));
+        const idx = PILOT_DATASET.findIndex(c => c.seq === seq);
+        if (idx !== -1) state.cardIndex = idx;
+        state.activeTab = 'cards';
+        renderApp();
+      } else if (action === 'jump-glyph') {
+        const glyph = btn.getAttribute('data-glyph');
+        const idx = PILOT_DATASET.findIndex(c => c.glyph === glyph);
+        if (idx !== -1) state.cardIndex = idx;
+        state.activeTab = 'cards';
+        renderApp();
+      } else if (action === 'select-passage') {
+        state.passageIdx = Number(btn.getAttribute('data-idx'));
+        const firstTarget = EXPLAINED_PASSAGES[state.passageIdx].segments.findIndex(s => s.isTarget);
+        state.activeSegmentIdx = firstTarget !== -1 ? firstTarget : 0;
+        renderApp();
+      } else if (action === 'select-segment') {
+        state.activeSegmentIdx = Number(btn.getAttribute('data-idx'));
+        speakKorean(btn.getAttribute('data-speech'));
+        renderApp();
+      } else if (action === 'toggle-sort') {
+        state.sortBy = state.sortBy === 'seq' ? 'phonetic' : 'seq';
+        renderApp();
+      }
+    });
+
+    // Header & Modal Controls
+    document.getElementById('headerHomeBtn').addEventListener('click', () => {
+      state.activeTab = 'home';
+      renderApp();
+    });
+    document.getElementById('headerTextsBtn').addEventListener('click', () => {
+      state.activeTab = 'texts';
+      renderApp();
+    });
+
+    const shareModal = document.getElementById('shareModal');
+    document.getElementById('openShareModalBtn').addEventListener('click', () => {
+      shareModal.classList.remove('hidden');
+      shareModal.classList.add('flex');
+    });
+    document.getElementById('closeShareModalBtn').addEventListener('click', () => {
+      shareModal.classList.add('hidden');
+      shareModal.classList.remove('flex');
+    });
+
+    // Download Standalone HTML File
+    document.getElementById('downloadHtmlBtn').addEventListener('click', () => {
+      const fullHtml = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // Copy Full HTML Fallback (iFrame-compatible execCommand)
+    document.getElementById('copyHtmlBtn').addEventListener('click', () => {
+      const fullHtml = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const ta = document.createElement('textarea');
+      ta.value = fullHtml;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        document.getElementById('copyHtmlBtnLabel').textContent = '✓ Full HTML Copied to Clipboard!';
+        setTimeout(() => {
+          document.getElementById('copyHtmlBtnLabel').textContent = 'Or Copy Full HTML Code to Clipboard';
+        }, 2200);
+      } catch (err) {}
+      document.body.removeChild(ta);
+    });
+
+    // Reset Modal Controls
+    const resetModal = document.getElementById('resetModal');
+    document.getElementById('openResetModalBtn').addEventListener('click', () => {
+      resetModal.classList.remove('hidden');
+      resetModal.classList.add('flex');
+    });
+    document.getElementById('cancelResetBtn').addEventListener('click', () => {
+      resetModal.classList.add('hidden');
+      resetModal.classList.remove('flex');
+    });
+    document.getElementById('confirmResetBtn').addEventListener('click', () => {
+      state.mastery = { introduced: [], readings: [], compounds: [], reviewQueue: [] };
+      saveMastery();
+      state.cardIndex = 0;
+      state.activeTab = 'home';
+      resetModal.classList.add('hidden');
+      resetModal.classList.remove('flex');
+      renderApp();
+    });
+
+    // Initial Boot
+    window.onload = function () {
+      renderApp();
+    };
+  </script>
+
+</body></html>
